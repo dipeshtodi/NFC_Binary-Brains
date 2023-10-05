@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PPF Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="h-card">
+        <div class="card_content">
+          <h2>What is PPF?</h2>
+          <p>
+            The purpose of the Public Provident Fund (PPF), which was first implemented in India in 1968, was to mobilise small contributions for investment and return. It can also be referred to as an investment vehicle that enables one to accumulate retirement funds while reducing yearly taxes. Anyone looking for a safe investment option to save taxes and earn guaranteed returns should open a PPF account.
+          </p>
+        </div>
+        <div class="h-card">
+            <div class="card_content">
+              <h2>How important is PPF?</h2>
+              <p>
+                The PPF (Public Provident Fund) is considered an excellent investment option, especially for people uncomfortable with taking risks. While the returns may not be very high because they depend on the market, they offer stability. Additionally, investing in PPF can help diversify your portfolio and has tax benefits.
+              </p>
+            </div>
+            <div class="h-card">
+                <div class="card_content">
+                  <h2>How PPF account works?</h2>
+                  <p>A PPF account can be opened by an adult for self or on behalf of a minor. The account tenure is <strong>15 years</strong> and the lock-in period for the account is 15 years. You can make a deposit to a PPF account ranging from <strong>Rs.500 up to Rs.1.5 lakh</strong> per financial year.
+                </p>
+                  <p>
+                    The deposit can be made in a lump sum or in instalments. There is no restriction on the number of instalments per financial year. The deposits must be made every financial year during the tenure and such <b>deposits are exempt from income tax</b> u/s 80C
+                  </p>
+                </div>
+                <div class="h-card">
+                    <div class="card_content">
+                      <h2>Tax Savings in PPF:</h2>
+                      <p>PPF is one investment vehicle that falls under the <b>Exempt-Exempt-Exempt (EEE)</b> category. This, in other words, means that all deposits made in the PPF are deductible under Section 80C of the Income Tax Act. However, it should be noted that the maximum contribution in PPF cannot exceed Rs.1.5 lakh in one financial year.
+                    </p>
+                      <p>
+                        The deposit can be made in a lump sum or in instalments. There is no restriction on the number of instalments per financial year. The deposits must be made every financial year during the tenure and such <b>deposits are exempt from income tax</b> u/s 80C
+                        Furthermore, the accumulated amount and interest is also <i>exempt from tax at the time of withdrawal</i>.
+                      </p>
+                    </div>
+                
+
+<b>NOTE:</b> <p>Deduction u/s 80C is available <u>only in OLD Tax Regime.</u></p>
+It is important to note that a PPF account cannot be closed before maturity.
+ </div>
+ <hr>
+    <div class="container">
+        <h1>PPF Calculator</h1>
+        <label for="principal">Initial Principal Amount (₹500 - ₹150000):</label>
+        <input type="number" id="principal" min="500" max="150000" step="500" required>
+
+        <label for="contribution">Yearly Contribution (₹500 - ₹150000):</label>
+        <input type="number" id="contribution" min="500" max="150000" step="500" required>
+
+        <label for="years">Investment Period (15 - 50 years):</label>
+        <select id="years" required>
+            <option value="15">15 years</option>
+            <option value="20">20 years</option>
+            <option value="25">25 years</option>
+            <option value="30">30 years</option>
+            <option value="35">35 years</option>
+            <option value="40">40 years</option>
+            <option value="45">45 years</option>
+            <option value="50">50 years</option>
+        </select>
+
+        <button onclick="calculatePPF()">Calculate</button>
+
+        <div id="result" style="display: none;">
+            <h2>PPF Details</h2>
+            <p>Initial Principal Amount: ₹<span id="principalAmount"></span></p>
+            <p>Yearly Contribution: ₹<span id="yearlyContribution"></span></p>
+            <p>Investment Period: <span id="investmentPeriod"></span> years</p>
+            <p>Rate of Interest: 7.1% per annum (compounded annually)</p>
+            <p>Final Maturity Amount: ₹<span id="maturityAmount"></span></p>
+        </div>
+    </div>
+
+    <script>
+        function calculatePPF() {
+            const principal = parseFloat(document.getElementById('principal').value);
+            const contribution = parseFloat(document.getElementById('contribution').value);
+            const years = parseInt(document.getElementById('years').value);
+
+            const rateOfInterest = 7.1 / 100; // 7.1% interest rate
+            let maturityAmount = principal;
+
+            for (let year = 2; year <= years; year++) {
+                maturityAmount += contribution;
+                maturityAmount *= (1 + rateOfInterest);
+            }
+
+            document.getElementById('principalAmount').textContent = principal;
+            document.getElementById('yearlyContribution').textContent = contribution;
+            document.getElementById('investmentPeriod').textContent = years;
+            document.getElementById('maturityAmount').textContent = maturityAmount.toFixed(2);
+
+            document.getElementById('result').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

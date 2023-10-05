@@ -107,6 +107,10 @@ const signUp = () => {
             // Signed in 
             document.write("You are Signed Up")
             console.log(result)
+
+
+             // Redirect to the dashboard page
+             window.location.href = "sign.html";
             // ...
         })
         .catch((error) => {
@@ -128,7 +132,7 @@ const signIn = () => {
             console.log(result);
 
             // Redirect to the dashboard page
-            window.location.href = "dashboard.html";
+            window.location.href = "index.html";
         })
         .catch((error) => {
             console.log(error.code);
