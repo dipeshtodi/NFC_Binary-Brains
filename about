@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Mission and Vision</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+    <nav class="bg-white bg-opacity-75 p-4 fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Navigation content here -->
+        </div>
+    </nav>
+
+    <div class="h-screen flex flex-col justify-center items-center">
+        <div class="bg-white p-8 rounded shadow-lg w-3/4">
+            <h1 class="text-3xl font-semibold mb-4">Our Mission</h1>
+            <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a justo urna. Donec ut hendrerit erat. Fusce non massa a erat posuere tincidunt. Nullam rhoncus arcu vitae purus congue, a efficitur velit dignissim.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded shadow-lg w-3/4 mt-8">
+            <h1 class="text-3xl font-semibold mb-4">Our Vision</h1>
+            <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a justo urna. Donec ut hendrerit erat. Fusce non massa a erat posuere tincidunt. Nullam rhoncus arcu vitae purus congue, a efficitur velit dignissim.</p>
+        </div>
+    </div>
+
+    <!-- Include the rest of your page content here -->
+
+</body>
+
+</html>

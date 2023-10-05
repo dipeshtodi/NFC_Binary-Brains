@@ -3,24 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQs</title>
+    <title>FAQs Page</title>
     <!-- Include Tailwind CSS styles -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
     
 </head>
 <body>
-    <body style="background-image: url('1234.jpg'); background-size: cover; background-repeat: no-repeat;"></body>
-    <!-- Header Section -->
 
-    <header class="bg-blue-500 p-4">
-        <!-- Logo and Navigation Menu -->
-        <div class="container mx-auto">
-            <div class="text-white text-xl font-bold">Your Logo</div>
+    <nav class="bg-white bg-opacity-75 p-4 fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+          <div class="flex items-center">
+            <h1 class="text-xl font-bold"><a href="index.html">TaxEase</h1></a>
+          </div>
+          <div class="hidden md:flex space-x-4">
+            <a href="index.html" class="text-gray-800 hover:text-blue-500">Home</a>
+            
+            <a href="calc.html" class="text-gray-800 hover:text-blue-500">Services</a>
+            <a href="#" class="text-gray-800 hover:text-blue-500">About</a>
+            <a href="blog.html" class="text-gray-800 hover:text-blue-500">Blogs</a>
+            <a href="FAQ.html" class="text-gray-800 hover:text-blue-500">FAQs</a>
+          </div>
+          <div class="flex items-center">
+            <button class="text-blue-500 border border-blue-500 px-4 py-2 rounded-md mr-2"><a href="register.html">Register</a></button>
+            <button class="text-white bg-blue-500 px-4 py-2 rounded-md"><a href="sign.html">Login</a></button>
+            
+          </div>
         </div>
-    </header>
+        
+      </nav>
+    <body style="background-image: url('1234.jpg'); background-size: cover; background-repeat: no-repeat;"></body>
+  
 
     <!-- FAQ Section -->
-    <section class="container mx-auto mt-6 p-4" style="background-color: aliceblue;" >
+    <div class="full">
+    <section class="container mx-auto mt-20 p-10" style="background-color: aliceblue;" >
         <h1 class="text-2xl font-semibold mb-6" >Frequently Asked Questions</h1>
 
         <!-- FAQ Items -->
@@ -160,6 +176,7 @@
             </div>
 
         </div>
+    </div>
 
 
     </section>
@@ -173,5 +190,17 @@
             });
         });
     </script>
+    <script>
+        window.embeddedChatbotConfig = {
+        chatbotId: "ogv1bXc2DYBaJPYJP-kS5",
+        domain: "www.chatbase.co"
+        }
+        </script>
+        <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotId="ogv1bXc2DYBaJPYJP-kS5"
+        domain="www.chatbase.co"
+        defer>
+        </script>
 </body>
 </html>

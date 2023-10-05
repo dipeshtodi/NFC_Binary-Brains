@@ -1,0 +1,45 @@
+/* Reset some default styles for better consistency */
+body, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the main content area */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f1fafa;
+    border: 1px solid #e64848;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the individual cards */
+.h-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style headings and paragraphs within cards */
+.h-card h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.h-card p {
+    color: #120439;
+    line-height: 1.5;
+}
+
+/* Style the FontAwesome icon */
+.h-card i {
+    color: #0c041c;
+    font-size: 16px;
+    margin-right: 5px;
+}
